@@ -1,0 +1,8 @@
+[submodule "sota-frontend"]
+	path = sota-frontend
+	url = https://github.com/SPaM-Skill-Issue/sota-frontend.git
+	branch = main
+[submodule "sota-backend"]
+	path = sota-backend
+	url = https://github.com/SPaM-Skill-Issue/sota-backend.git
+	branch = main
