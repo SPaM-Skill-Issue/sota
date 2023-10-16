@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     
     defaults:
-      runs:
+      run:
         shell: bash
     
     steps:
