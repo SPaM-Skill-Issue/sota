@@ -1,0 +1,23 @@
+services:
+  sota-db:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGO_PASSWORD?:MONGO_PASSWORD not set in env}"
+    volumes:
+      - sotadb:/data/db
+    healthcheck:
+      test: mongosh --eval 'db.runCommand("ping").ok' --quiet
+      interval: 5s
+      timeout: 5s
+      retries: 3
+
+# backend requires Dockerfile
+  # sota-backend:
+
+# frontend requires Dockerfile
+  # sota-frontend:
+
+volumes:
+  sotadb:
